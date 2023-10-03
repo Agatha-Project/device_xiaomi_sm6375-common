@@ -154,6 +154,9 @@ on boot
     #ExtR HONGMI-90116,wufa@wingtech.com,add,20210908,add mi_thermal
     chown system system /sys/class/thermal/thermal_message/sconfig
 
+    # Disable doze brightness handling
+    write /sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/doze_brightness -1
+
 # add dual
     mkdir /mnt/vendor/persist/camera 0777 system system
     chmod 0777 /data/vendor/camera
